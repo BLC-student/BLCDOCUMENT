@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Charan">
+  <meta name="description" content="Personal website of Charan aka BLC.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLC's About Page</title>
+  <link rel="icon" href="Copilot_20251019_194251.png" type="image/x-icon">
+  <style>
+    :root {
+      --bg-dark: linear-gradient(135deg, #1f1c2c, #928dab);
+      --bg-light: linear-gradient(135deg, #f0f0f0, #dcdcdc);
+      --text-dark: #fff;
+      --text-light: #222;
+      --accent: #ffeb3b;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-dark);
+      transition: background 0.5s ease, color 0.5s ease;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fff;
+      text-shadow: 0 0 5px var(--accent), 0 0 10px var(--accent);
+    }
+
+    .go-back {
+      display: inline-block;
+      background-color: rgba(255, 255, 255, 0.05);
+      color: var(--accent);
+      border: none;
+      border-radius: 10px;
+      padding: 6px 12px;
+      font-size: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+
+    .go-back:hover {
+      opacity: 0.9;
+      box-shadow: 10px 10px 10px var(--accent);
+    }
+
+    .go-back:active {
+      opacity: 0.5;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      margin-bottom: 2rem;
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    section:hover {
+      box-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent);
+    }
+
+    h1, h2 {
+      text-wrap: balance;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    #greeting {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: var(--accent);
+      min-height: 1.5em;
+    }
+
+    #clock {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+
+    #themeToggle {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 8px;
+      background-color: var(--accent);
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #fact {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      font-style: italic;
+      color: #ccc;
+    }
+
+    .tribal {
+      position: fixed;
+      top: -50px;
+      left: -50px;
+      width: 200px;
+      height: 200px;
+      opacity: 0.05;
+      z-index: -1;
+      animation: swirl 30s linear infinite, pulse 5s ease-in-out infinite;
+    }
+
+    @keyframes swirl {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.05; transform: scale(1); }
+      50% { opacity: 0.1; transform: scale(1.05); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--text-dark);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
+      section {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <svg class="tribal" viewBox="0 0 100 100">
+    <path d="M50 0 C70 20, 70 80, 50 100 C30 80, 30 20, 50 0 Z" fill="#fff"/>
+  </svg>
+
+  <header>
+    <h1>BLC's Personal Website</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="document 3.html" class="go-back">🡰 Go back</a>
+    </nav>
+    <div id="greeting"></div>
+    <div id="clock"></div>
+    <button id="themeToggle" aria-label="Toggle theme">🌙 Switch Theme</button>
+    <div id="fact"></div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi, I'm Charan — also known as BLC. 
+      I love building decoratic webite, playful browser pranks,
+      and with help of my companion Copilot.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li>🧩 Interactive Dashboard with Theme Switch</li>
+      <li>🎯 Meme Launcher with JS Pranks</li>
+      <li>🌀 Tribal Pattern Generator</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Want to collaborate or riff on wild ideas? Reach me at: 
+      <strong>
+        <a href="mailto:blcharan2047@gmail.com" style="color: var(--accent); text-decoration: none;">blcharan2047@gmail.com</a>
+      </strong>
+    </p>
+  </section>
+
+  <footer>
+    &copy;2025 BLC. Half-made by author Charan and AI Copilot
+  </footer>
+
+  <script>
+    
+    // Greeting
+    const greetingEl = document.getElementById('greeting');
+    const hour = new Date().getHours();
+    const rawGreeting = hour < 12 ? '🌅 Good morning, BLC!' :
+                        hour < 18 ? '☀️ Good afternoon, BLC!' :
+                                    '🌙 Good evening, BLC!';
+    let i = 0;
+    function typeGreeting() {
+      if (i < rawGreeting.length) {
+        greetingEl.textContent += rawGreeting.charAt(i);
+        i++;
+        setTimeout(typeGreeting, 50);
+      }
+    }
+    typeGreeting();
+
+    // Clock
+    const clockEl = document.getElementById('clock');
+    function updateClock() {
+      const now = new Date();
+      clockEl.textContent = now.toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // Theme toggle
+    const toggleBtn = document.getElementById('themeToggle');
+    let isDark = true;
+    toggleBtn.addEventListener('click', () => {
+      document.body.style.background = isDark
+        ? getComputedStyle(document.documentElement).getPropertyValue('--bg-light')
+        : getComputedStyle(document.documentElement).getPropertyValue('--bg-dark');
+      document.body.style.color = isDark
+        ? getComputedStyle(document.documentElement).getPropertyValue('--text-light')
+        : getComputedStyle(document.documentElement).getPropertyValue('--text-dark');
+      toggleBtn.textContent = isDark ? '☀️ Switch Theme' : '🌙 Switch Theme';
+      isDark = !isDark;
+    });
+
+    // Rotating facts
+    const factEl = document.getElementById('fact');
+    const facts = [
+      "Author is Charan, a student.",
+      "This is a website where I manually made HTML and CSS; advanced CSS and JS by AI.",
+      "BLC = Brilliant, Lively, Creative 😎",
+      "JavaScript is Charan’s playground.",
+      "This is my first website mixed with HTML, CSS, JS.",
+      "Theme toggle powered by pure JavaScript.",
+      "Clock updates every second — no libraries needed.",
+      "Built with love, pranks, and Copilot."
+    ];
+    let factIndex = 0;
+    function rotateFacts() {
+      factEl.textContent = facts[factIndex];
+      factIndex = (factIndex + 1) % facts.length;
+    }
+    setInterval(rotateFacts, 4000);
+    rotateFacts();
+  </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML, CSS & JavaScript Explained</title>
+  <style>
+    :root {
+      --bg-color: #f0f2f5;
+      --card-bg: rgba(255, 255, 255, 0.85);
+      --card-border: rgba(0, 0, 0, 0.1);
+      --text-color: #222;
+      --accent-color: #3f51b5;
+      --font-main: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-main);
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 3rem 1rem;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    .container {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 2rem 2.5rem;
+      max-width: 900px;
+      width: 100%;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .container:hover {
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .go-back {
+      display: inline-block;
+      background-color: #f5f5f5;
+      color: #333;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 50px;
+      font-size: 15px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .go-back:hover {
+      opacity: 0.8;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .go-back:active {
+      background-color: #e0e0e0;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+      color: var(--accent-color);
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 0.4rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-top: 2rem;
+      color: var(--accent-color);
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 2px;
+      background-color: var(--accent-color);
+      margin-top: 0.4rem;
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-top: 1rem;
+      text-align: justify;
+    }
+
+    code {
+      background-color: #e0e0e0;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-family: monospace;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 1.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML, CSS & JavaScript Explained</h1>
+    <a href="document 3.html" class="go-back">🡰 Go Back</a>
+
+    <h2>HTML: The Foundation of the Web</h2>
+    <p>
+      HTML (HyperText Markup Language) is the backbone of every website. It defines the structure and content of web pages using a system of tags and elements. Think of HTML as the skeleton of a webpage—it organizes text, images, links, videos, and other media into a readable format. HTML uses elements like <code>&lt;h1&gt;</code> for headings, <code>&lt;p&gt;</code> for paragraphs, <code>&lt;a&gt;</code> for links, and <code>&lt;img&gt;</code> for images. HTML5, the latest version, introduced semantic tags like <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;section&gt;</code>, which help developers write cleaner, more meaningful code.
+    </p>
+
+    <h2>CSS: Styling the Web</h2>
+    <p>
+      CSS (Cascading Style Sheets) controls the layout, colors, fonts, spacing, and animations of HTML elements. It allows developers to separate content from design. CSS selectors target specific elements, and properties define how those elements should look. For example, <code>color: red;</code> changes text color, and <code>margin: 20px;</code> adds spacing. Modern CSS includes Flexbox, Grid, media queries, variables, animations, transitions, and pseudo-classes like <code>:hover</code> and <code>:focus</code>.
+    </p>
+
+    <h2>JavaScript: Making Things Interactive</h2>
+    <p>
+      JavaScript adds interactivity and dynamic behavior to websites. It runs in the browser and interacts with the DOM. You can use <code>document.querySelector()</code> to select an element and change its content or style. JavaScript supports variables, functions, loops, conditionals, and events. ES6+ features include arrow functions, classes, modules, and promises. Frameworks like React, Vue, and Angular are built on JavaScript.
+    </p>
+
+    <h2>How They Work Together</h2>
+    <p>
+      HTML provides the structure, CSS styles it, and JavaScript makes it interactive. For example, a login form uses HTML for fields, CSS for styling, and JavaScript for validation. These technologies are layered: HTML is the base, CSS is the skin, and JavaScript is the brain.
+    </p>
+
+    <h2>Why They Matter</h2>
+    <p>
+      Every website uses HTML, CSS, and JavaScript. HTML ensures content is structured and accessible. CSS makes it beautiful and responsive. JavaScript brings it to life. Learning them opens doors to careers in tech, freelancing, and creative expression.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+      HTML, CSS, and JavaScript are the core technologies that power the web. They work together to create engaging, responsive, and functional websites. Mastering them is the first step toward building impactful digital experiences.
+    </p>
+  </div>
+</body>
+</html>
